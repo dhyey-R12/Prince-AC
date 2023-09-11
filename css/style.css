@@ -573,6 +573,39 @@ footer .footer_copyright {
     text-align: center;
 }
 /*footer css end*/
+/*banner section css start*/
+.banner_section {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner_section .container {
+    max-width: 1320px;
+}
+.banner_section .banner_slide {
+    height: calc(100vh - 90px);
+    min-height: 550px;
+    display: flex !important;
+    align-items: center;
+    overflow: hidden;
+}
+.banner_section .banner_slide .row {
+    align-items: center;
+}
+.banner_section .banner_slide .content_col {
+    flex: 0 0 57.557%;
+    max-width: 57.557%;
+}
+.banner_section .banner_slide .image_col {
+    flex: 0 0 42.443%;
+    max-width: 42.443%;
+}
+.banner_section .banner_image img {
+    width: 100%;
+    display: block;
+    margin: 0;
+}
+/*banner section css end*/
 
 
 /*Responsive css start*/
