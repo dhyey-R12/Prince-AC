@@ -25,6 +25,9 @@ jQuery(document).ready(function () {
 		speed: 300,
 		slidesToShow: 1,
 		arrows: false,
+		touchThreshold: 60,
+		autoplay: true,
+		autoplaySpeed: 2000,
 	});  
 
 	// Producr slider JS
@@ -37,6 +40,8 @@ jQuery(document).ready(function () {
 		prevArrow: '.product_prev_btn',
 		nextArrow: '.product_next_btn',
 		touchThreshold: 60,
+		autoplay: true,
+		autoplaySpeed: 2000,
 		responsive: [
 		{
 			breakpoint: 1024,

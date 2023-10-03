@@ -618,11 +618,12 @@ footer p {
     max-width: 1320px;
 }
 .banner_section .banner_slide {
-    height: calc(64.5vh - 90px);
-    min-height: 550px;
+    /* height: calc(64.5vh - 90px); */
+    /* min-height: 550px; */
     display: flex !important;
     align-items: center;
-    overflow: hidden;
+    /* overflow: hidden; */
+    padding: 20px 0 17px;
 }
 .banner_section .banner_slide .row {
     align-items: center;
