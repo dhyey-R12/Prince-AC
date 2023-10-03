@@ -1,21 +1,26 @@
 jQuery(document).ready(function () {
 	// banner slider JS
 	var $slider = $('.banner_slider');
-	// var $progressBar = $('.progress');
-	// var $progressBarLabel = $( '.slider__label' );
+	var progressBar = jQuery('.progress');
 
-	// $slider.on('afterChange', function(event, slick, currentSlide, nextSlide) {   
-	// 	var currentDot = $(".slick-dots .slick-active").index() + 1;
-	// 	var dots = $slider.find('.slick-dots li').length;
-	// 	var calc = (currentDot/dots) * 100;
-	// 	$progressBar
-	// 	.css('background-size', calc + '% 100%')
-	// 	.attr('aria-valuenow', calc );
-	// 	$progressBarLabel.text( calc + '% completed' );
-	// });
+	$slider.on('init', function (event, slick) 
+	{
+		var calc = (1 / (slick.slideCount)) * 100;
+		progressBar.css('background-size', calc + '% 100%').attr('aria-valuenow', calc);
+	});
+	$slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) 
+	{
+		var calc = ((nextSlide + 1) / (slick.slideCount)) * 100;
+		progressBar.css('background-size', calc + '% 100%').attr('aria-valuenow', calc);
+	});
+	$slider.on("init reInit afterChange", function(event, slick) {
+		$(".banenr_slider_counter").html(
+			slick.slickCurrentSlide() + 1 + "/" + slick.slideCount
+		);
+	});
 
 	$slider.slick({
-		dots: false,
+		dots: true,
 		infinite: true,
 		speed: 300,
 		slidesToShow: 1,
@@ -53,4 +58,21 @@ jQuery(document).ready(function () {
 		}
 		]
 	});  
+});
+
+$(function() {
+	$('.slides').on('init', function(event, slick) {
+		$(this).append('<div class="slick-counter"><span class="current"></span> / <span class="total"></span></div>');
+		$('.current').text(slick.currentSlide + 1);
+		$('.total').text(slick.slideCount);
+	})
+	.slick({
+		autoplay: true,
+		autoplaySpeed: 3000,
+		infinite: true,
+		arrows: true
+	})
+	.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+		$('.current').text(nextSlide + 1);
+	});
 });
