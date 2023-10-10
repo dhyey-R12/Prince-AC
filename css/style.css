@@ -790,6 +790,10 @@ footer p {
     flex-direction: column;
     justify-content: space-between;
     /* min-height: 154px; */
+    transition: all 0.3s ease;
+}
+.services_section .service_content .content_col .service_card:hover {
+    background-color: #DAE7EF;
 }
 .services_section .service_content .content_col .service_card .service_card_icon {
     width: 70px;
@@ -798,7 +802,11 @@ footer p {
     align-items: center;
     justify-content: center;
     border-radius: 12px;
-    background: rgba(4, 94, 149, 0.10);
+    background-color: rgba(4, 94, 149, 0.10);
+    transition: all 0.3s ease;
+}
+.services_section .service_content .content_col .service_card:hover .service_card_icon {
+    background-color: rgb(4 94 149 / 20%);
 }
 .services_section .service_content .content_col .service_card h5 {
     margin: 14px 0 0;
