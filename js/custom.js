@@ -39,7 +39,7 @@ jQuery(document).ready(function () {
 		slidesToScroll: 1,
 		prevArrow: '.product_prev_btn',
 		nextArrow: '.product_next_btn',
-		touchThreshold: 60,
+		touchThreshold: 120,
 		autoplay: true,
 		autoplaySpeed: 2000,
 		responsive: [

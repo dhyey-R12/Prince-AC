@@ -699,6 +699,7 @@ footer p {
     left: 0;
     right: 0;
     bottom: 55px;
+    padding: 0 20px;
 }
 .banner_section .slider_progress_counter .banenr_slider_counter {
     font-size: 14px;
@@ -718,6 +719,7 @@ footer p {
 .welcome_section .row .image_col {
     flex: 0 0 41.6%;
     max-width: 41.6%;
+    display: flex;
 }
 .welcome_section .row .content_col {
     flex: 0 0 58.4%;
@@ -725,12 +727,16 @@ footer p {
     display: flex;
     align-items: center;
 }
+.welcome_section .welcome_image {
+    width: 100%;
+}
 .welcome_section .welcome_image .welcome_image_inner {
     position: relative;
     overflow: hidden;
     padding-top: 76.4%;
     z-index: 1;
     border-radius: 0 0 151px 0;
+    height: 100%;
 }   
 .welcome_section .welcome_image .welcome_image_inner:after {
     content: '';
@@ -1096,8 +1102,25 @@ footer p {
 
 
 /*Responsive css start*/
-@media (max-width: 1280px) {}
-@media (max-width: 1199px) {}
+@media (max-width: 1280px) {
+    .banner_section {
+        padding: 60px 0;
+    }
+    .welcome_section .row .content_col .welcome_content {
+        padding: 30px 20px 20px 80px;
+    }
+}
+@media (max-width: 1199px) {
+    h1, .head1 {
+        font-size: 54px;
+    }
+    h2, .head2 {
+        font-size: 30px;
+    }
+    h3, .head3 {
+        font-size: 34px;
+    }
+}
 @media (max-width: 991px) {}
 @media (max-width: 767px) {}
 @media (max-width: 575px) {}
