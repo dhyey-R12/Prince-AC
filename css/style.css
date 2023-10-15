@@ -1350,7 +1350,7 @@ footer p {
         display: block;
     }
     header .header_link_list {
-        position: absolute;
+        position: fixed;
         top: 0;
         right: 0;
         bottom: 0;
@@ -1421,6 +1421,12 @@ footer p {
     }
     .product_section .row.heading_row .slider_btn {
         justify-content: flex-end;
+        display: none;
+    }
+    .services_section .service_content, 
+    .contact_section .heading_text + .contact_form, 
+    .product_section .product_slider_sec {
+        margin-top: 20px;
     }
 }
 @media (max-width: 575px) {

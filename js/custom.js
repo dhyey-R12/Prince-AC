@@ -34,12 +34,12 @@ jQuery(document).ready(function () {
 		slidesToShow: 1,
 		arrows: false,
 		touchThreshold: 60,
-		// autoplay: true,
+		autoplay: true,
 		autoplaySpeed: 2000,
 	});  
 
 	// Producr slider JS
-	$('.product_slider').slick({
+	$('.product_slider').not('.slick-initialized').slick({
 		dots: false,
 		infinite: true,
 		speed: 300,
@@ -54,38 +54,27 @@ jQuery(document).ready(function () {
 		{
 			breakpoint: 992,
 			settings: {
-				slidesToShow: 3,
+				slidesToShow: 3
 			}
 		},
 		{
 			breakpoint: 768,
 			settings: {
-				slidesToShow: 2,
+				slidesToShow: 2
 			}
 		},
 		{
 			breakpoint: 576,
 			settings: {
-				slidesToShow: 1,
+				slidesToShow: 1
 			}
 		}
 		]
 	});  
-});
-
-$(function() {
-	$('.slides').on('init', function(event, slick) {
-		$(this).append('<div class="slick-counter"><span class="current"></span> / <span class="total"></span></div>');
-		$('.current').text(slick.currentSlide + 1);
-		$('.total').text(slick.slideCount);
-	})
-	.slick({
-		autoplay: true,
-		autoplaySpeed: 3000,
-		infinite: true,
-		arrows: true
-	})
-	.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-		$('.current').text(nextSlide + 1);
-	});
+	// $(window).on("resize orientationchange onload",function(){
+	// 	if (window.innerWidth < 576) {
+	// 		$('.product_slider')[0].slick.refresh();
+	// 		console.log("refresh");
+	// 	}
+	// });
 });
