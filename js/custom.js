@@ -1,4 +1,12 @@
 jQuery(document).ready(function () {
+	// navbar toggle js
+	$('.navbar_toggler').click(function(){
+		$('body').toggleClass('no_scroll');
+		$('.header_link_list').toggleClass('header_menu_active');
+		$(this).toggleClass('open_menu');
+		$(this).next("nav").toggleClass('navbar_animate');
+	});
+	
 	// banner slider JS
 	var $slider = $('.banner_slider');
 	var progressBar = jQuery('.progress');
@@ -26,7 +34,7 @@ jQuery(document).ready(function () {
 		slidesToShow: 1,
 		arrows: false,
 		touchThreshold: 60,
-		autoplay: true,
+		// autoplay: true,
 		autoplaySpeed: 2000,
 	});  
 
@@ -44,19 +52,19 @@ jQuery(document).ready(function () {
 		autoplaySpeed: 2000,
 		responsive: [
 		{
-			breakpoint: 1024,
+			breakpoint: 992,
 			settings: {
 				slidesToShow: 3,
 			}
 		},
 		{
-			breakpoint: 600,
+			breakpoint: 768,
 			settings: {
 				slidesToShow: 2,
 			}
 		},
 		{
-			breakpoint: 480,
+			breakpoint: 576,
 			settings: {
 				slidesToShow: 1,
 			}
