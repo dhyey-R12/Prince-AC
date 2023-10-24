@@ -667,6 +667,7 @@ footer p {
 /*footer css end*/
 /*banner section css start*/
 .banner_section {
+    background-color: #fff;
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
