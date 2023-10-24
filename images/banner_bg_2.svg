@@ -22,22 +22,22 @@
 	</g>
 	<rect width="1440" height="820" fill="url(#paint0_linear_26_29)"/>
 	<defs>
-		<filter id="filter0_f_26_29" x="-572" y="-927.016" width="1923" height="2053.89" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB" style="filter: blur(200px);-webkit-filter: blur(200px);-moz-filter: blur(200px);-ms-filter: blur(200px);">
+		<filter id="filter0_f_26_29" x="-572" y="-927.016" width="1923" height="2053.89" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
 			<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 			<feGaussianBlur stdDeviation="200" result="effect1_foregroundBlur_26_29"   />
 		</filter>
-		<filter id="filter1_f_26_29" x="381" y="-240.328" width="1618" height="1713.34" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB" style="filter: blur(200px);-webkit-filter: blur(200px);-moz-filter: blur(200px);-ms-filter: blur(200px);">
+		<filter id="filter1_f_26_29" x="381" y="-240.328" width="1618" height="1713.34" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
 			<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 			<feGaussianBlur stdDeviation="200" result="effect1_foregroundBlur_26_29" />
 		</filter>
-		<filter id="filter2_f_26_29" x="418" y="-665.742" width="1455" height="1531.34" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB" style="filter: blur(200px);-webkit-filter: blur(200px);-moz-filter: blur(200px);-ms-filter: blur(200px);">
+		<filter id="filter2_f_26_29" x="418" y="-665.742" width="1455" height="1531.34" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
 			<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 			<feGaussianBlur stdDeviation="200" result="effect1_foregroundBlur_26_29" />
 		</filter>
-		<filter id="filter3_f_26_29" x="-415" y="-205.711" width="1694" height="1798.2" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB" style="filter: blur(200px);-webkit-filter: blur(200px);-moz-filter: blur(200px);-ms-filter: blur(200px);">
+		<filter id="filter3_f_26_29" x="-415" y="-205.711" width="1694" height="1798.2" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
 			<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 			<feGaussianBlur stdDeviation="200" result="effect1_foregroundBlur_26_29" />
