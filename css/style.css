@@ -184,6 +184,7 @@ html, body {
     font-style: normal;
     line-height: normal;
     color: #6E6F71;
+    background-color: #fff;
 }
 
 body:not(.single-post,.clinic-long-content) main {
@@ -667,7 +668,7 @@ footer p {
 /*footer css end*/
 /*banner section css start*/
 .banner_section {
-    background-color: transparent;
+    background-color: #fff;
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
