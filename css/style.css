@@ -560,7 +560,7 @@ header .navbar_toggler .navbar_toggler_inner:before {
     transition-duration: 0.3s;
     transition-property: transform;
     border-radius: 0px;
-    background-color: #000;
+    background-color: #1D1E31;
     position: absolute;
     left: 0;
     right: 0;
