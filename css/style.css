@@ -184,7 +184,7 @@ html, body {
     font-style: normal;
     line-height: normal;
     color: #6E6F71;
-    background-color: #fff;
+    background-color: #fff; 
 }
 
 body:not(.single-post,.clinic-long-content) main {
