@@ -1137,6 +1137,7 @@ footer p {
     min-width: 192px;
     height: 50px;
     text-align: center;
+    font-size: 16px;
 }
 .contact_section .contact_form_box button:hover {
     background-color: transparent;
