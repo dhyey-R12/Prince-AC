@@ -1,3 +1,4 @@
+var $ = jQuery.noConflict();
 jQuery(document).ready(function () {
 	// navbar toggle js
 	$('.navbar_toggler').click(function(){
@@ -70,11 +71,22 @@ jQuery(document).ready(function () {
 			}
 		}
 		]
-	});  
-	// $(window).on("resize orientationchange onload",function(){
-	// 	if (window.innerWidth < 576) {
-	// 		$('.product_slider')[0].slick.refresh();
-	// 		console.log("refresh");
-	// 	}
-	// });
+	});
+
+	// Product Gallery JS
+	$('.product_gallery_slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		asNavFor: '.product_gallery_thumbnails_slider'
+	});
+	$('.product_gallery_thumbnails_slider').slick({
+		slidesToShow: 5,
+		slidesToScroll: 1,
+		asNavFor: '.product_gallery_slider',
+		arrows: false,
+		dots: false,
+		focusOnSelect: true,
+		vertical: true
+	});
 });
