@@ -87,6 +87,15 @@ jQuery(document).ready(function () {
 		arrows: false,
 		dots: false,
 		focusOnSelect: true,
-		vertical: true
+		vertical: true,
+		responsive: [
+		{
+			breakpoint: 576,
+			settings: {
+				vertical: false,
+				slidesToShow: 1,
+			}
+		}
+		]
 	});
 });
