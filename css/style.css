@@ -796,7 +796,15 @@ footer p {
     color: #1D1E31;
     font-weight: 500;
     margin: 0;
+    /*transform: translateX(-50%);
+    opacity: 0;
+    transition: all 0.4s ease 0.3s;*/
 }
+/*.banner_section .slick-active .banner_slide .banner_content_inner h1 {
+    opacity: 1;
+    transform: none;
+    transition-delay: 0;
+}*/
 .banner_section .banner_slide .banner_content_inner h1 span {
     font-weight: 700;
     color: #045E95;
@@ -849,6 +857,26 @@ footer p {
     font-size: 14px;
     color: #1D1E31;
     font-weight: 500;
+}
+@keyframes fadeout {
+    from {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+@keyframes fadeout {
+    from {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
 }
 /*banner section css end*/
 /*welcome section css start*/

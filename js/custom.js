@@ -31,12 +31,12 @@ jQuery(document).ready(function () {
 	$slider.slick({
 		dots: true,
 		infinite: true,
-		speed: 300,
+		speed: 1500,
 		slidesToShow: 1,
 		arrows: false,
 		touchThreshold: 60,
 		autoplay: true,
-		autoplaySpeed: 2000,
+		autoplaySpeed: 4000,
 	});  
 
 	// Producr slider JS
