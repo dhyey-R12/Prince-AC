@@ -8,9 +8,21 @@ jQuery(document).ready(function () {
 		$(this).next("nav").toggleClass('navbar_animate');
 	});
 
+	// navbar toggle js
+	var headerHeight = jQuery('header').outerHeight();
+	$(window).scroll(function() {    
+		var scroll = $(window).scrollTop();
+		if (scroll >= headerHeight) {
+			$("header").addClass("sticky");
+			$("body").css("padding-top", headerHeight);
+		} else {
+			$("header").removeClass("sticky");
+			$("body").css("padding-top", "0");
+		}
+	});
+
 	// scrollspy js
 	$(document).on("scroll", onScroll);
-	var headerHeight = jQuery('header').outerHeight();
 	$('a[href^="#"]').on('click', function (e) {
 		e.preventDefault();
 		$(document).off("scroll");
@@ -29,6 +41,10 @@ jQuery(document).ready(function () {
 			// window.location.hash = target;
 			$(document).on("scroll", onScroll);
 		});
+		let windowWidth = jQuery(window).width();
+		if (windowWidth < 768) {
+			$('.navbar_toggler').trigger('click');
+		}
 	});
 
 	function onScroll(event){
@@ -36,7 +52,7 @@ jQuery(document).ready(function () {
 		$('header nav.header_link ul li a').each(function () {
 			var currLink = $(this);
 			var refElement = $(currLink.attr("href"));
-			if (refElement.offset().top <= scrollPos && refElement.offset().top + refElement.height() > scrollPos) {
+			if (refElement.offset().top <= scrollPos + headerHeight && refElement.offset().top + refElement.height() > scrollPos + headerHeight) {
 			// if (refElement.position().top <= scrollPos && refElement.height() > scrollPos) {
 				$('#menu-center ul li a').removeClass("active");
 				currLink.addClass("active");
