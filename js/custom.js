@@ -7,6 +7,81 @@ jQuery(document).ready(function () {
 		$(this).toggleClass('open_menu');
 		$(this).next("nav").toggleClass('navbar_animate');
 	});
+
+	// scrollspy js
+	$(document).on("scroll", onScroll);
+	var headerHeight = jQuery('header').outerHeight();
+	$('a[href^="#"]').on('click', function (e) {
+		e.preventDefault();
+		$(document).off("scroll");
+
+		$('a').each(function () {
+			$(this).removeClass('active');
+		})
+		$(this).addClass('active');
+
+		var target = this.hash,
+		menu = target;
+		$target = $(target);
+		$('html, body').stop().animate({
+			'scrollTop': $target.offset().top - headerHeight
+		}, 500, 'swing', function () {
+			// window.location.hash = target;
+			$(document).on("scroll", onScroll);
+		});
+	});
+
+	function onScroll(event){
+		var scrollPos = $(document).scrollTop();
+		$('header nav.header_link ul li a').each(function () {
+			var currLink = $(this);
+			var refElement = $(currLink.attr("href"));
+			if (refElement.offset().top <= scrollPos && refElement.offset().top + refElement.height() > scrollPos) {
+			// if (refElement.position().top <= scrollPos && refElement.height() > scrollPos) {
+				$('#menu-center ul li a').removeClass("active");
+				currLink.addClass("active");
+			}
+			else{
+				currLink.removeClass("active");
+			}
+		});
+	}
+	// var sectionIds = $('header nav.header_link ul li a');
+	// jQuery(document).scroll(function(){
+	// 	sectionIds.each(function(){
+	// 		var container = $(this).attr('href');
+	// 		var containerOffset = $(container).offset().top;
+	// 		var containerHeight = $(container).outerHeight();
+	// 		var containerBottom = containerOffset + containerHeight;
+	// 		var scrollPosition = $(document).scrollTop();
+	// 		if(scrollPosition < containerBottom - (headerHeight + 1) && scrollPosition >= containerOffset - (headerHeight + 1)){
+	// 			$(this).addClass('active');
+	// 		} else{
+	// 			$(this).removeClass('active');
+	// 		}
+	// 	});
+	// });
+	// jQuery("a").on('click', function(event) {
+	// 	if (this.hash !== "") {
+	// 		event.preventDefault();
+	// 		var hash = this.hash;
+	// 		jQuery('html, body').animate({
+	// 			scrollTop: jQuery(hash).offset().top - headerHeight
+	// 		}, 1000);
+	// 		/*
+	// 		, function(){
+	// 			window.location.hash = hash;
+	// 			setTimeout(function() {
+	// 				jQuery('html, body').animate({
+	// 					scrollTop: jQuery(hash).offset().top - headerHeight
+	// 				}, 1000);
+	// 			},1000);
+	// 		}
+	// 		*/
+	// 		// console.log("jQuery(hash).offset().top - headerHeight",jQuery(hash).offset().top - headerHeight);
+	// 		// console.log("jQuery(hash).offset().top",jQuery(hash).offset().top);
+	// 	} 
+	// });
 	
 	// banner slider JS
 	var $slider = $('.banner_slider');
